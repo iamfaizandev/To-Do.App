@@ -2,42 +2,43 @@
 
 
 
-*,*::before,
-*::after{
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
+
 }
-body{
+
+body {
     background-color: #fff;
     background-image: url(../image/Bg.png);
-    
-    background-size: cover;
-    
+    background-repeat: no-repeat;
+    height: 100vh;
 
-   
 }
 
-.container{
+.container {
     width: 50%;
     min-width: 450px;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    background-color:darkslategray;
+    background-color: darkslategray;
     border-radius: 5px;
     padding: 30px 20px;
     border: 2px solid wheat;
-    box-shadow: 7px 4px  gray;
-        
-}    
+    box-shadow: 7px 4px gray;
 
-#newTask{
+}
+
+#newTask {
     position: relative;
 }
-#newTask input{
+
+#newTask input {
     width: 75%;
     height: 45px;
     font-family: 'Poppins', sans-serif;
@@ -52,52 +53,41 @@ body{
     transition: 0.5s;
 }
 
-#push:hover{
-    background-image:     linear-gradient(
-      to right, 
-      #1565C0 25%,
-      #566573 25%,
-      #A9CCE3 25%,
-      #5D6D7E 25%
-     
-     
-     
-    );
-  animation:slidebg 2s linear infinite;background-image:     linear-gradient(
-    to righ, 
-    #1565C0 25%,
-    #566573 25%,
-    #A9CCE3 25%,
-    #5D6D7E 25%
-   
-   
-   
-  );
-animation:slidebg 2s linear infinite;background-image:     linear-gradient(
-      to right, 
-      #1565C0 25%,
-      #566573 25%,
-      #A9CCE3 25%,
-      #5D6D7E 25%
-     
-     
-     
-    );
-  animation:slidebg 2s linear infinite;
-}
-@keyframes slidebg {
-    to {
-      background-position:20vw;
-    }
-  }
-#newTask input:hover,
-#newTask:focus {
-  transition: 0.5s;
-  box-shadow: 0 0.5em 0.5em -0.4em black;
-  transform: translateY(-0.25em);
+#push:hover {
+    background-image: linear-gradient(to right,
+            #1565C0 25%,
+            #566573 25%,
+            #A9CCE3 25%,
+            #5D6D7E 25%);
+    animation: slidebg 2s linear infinite;
+    background-image: linear-gradient(to righ,
+            #1565C0 25%,
+            #566573 25%,
+            #A9CCE3 25%,
+            #5D6D7E 25%);
+    animation: slidebg 2s linear infinite;
+    background-image: linear-gradient(to right,
+            #1565C0 25%,
+            #566573 25%,
+            #A9CCE3 25%,
+            #5D6D7E 25%);
+    animation: slidebg 2s linear infinite;
 }
 
-#newTask button{
+@keyframes slidebg {
+    to {
+        background-position: 20vw;
+    }
+}
+
+#newTask input:hover,
+#newTask:focus {
+    transition: 0.5s;
+    box-shadow: 0 0.5em 0.5em -0.4em black;
+    transform: translateY(-0.25em);
+}
+
+#newTask button {
     position: relative;
     font-family: 'Poppins';
     font-size: 16px;
@@ -107,13 +97,15 @@ animation:slidebg 2s linear infinite;background-image:     linear-gradient(
     font-weight: bold;
     outline: none;
 }
-#tasks{
+
+#tasks {
     margin-top: 20px;
     border-radius: 10px;
     width: 100%;
     position: relative;
 }
-.task{
+
+.task {
     background-color: #1F618D;
     height: 50px;
     margin-bottom: 8px;
@@ -123,17 +115,19 @@ animation:slidebg 2s linear infinite;background-image:     linear-gradient(
     border-radius: 5px;
     font-size: 16px;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     border: 1px solid #939697;
     cursor: pointer;
     font-weight: bold;
 }
-.task span{
+
+.task span {
     font-family: 'Source Serif Pro', serif;
     font-size: 15px;
     font-weight: 400;
 }
-.task button{
+
+.task button {
     height: 100%;
     width: 40px;
     border-radius: 5px;
@@ -143,44 +137,64 @@ animation:slidebg 2s linear infinite;background-image:     linear-gradient(
     outline: none;
     transform: scale(0.9);
     transition: 1s;
-   
-   
+
+
 }
-.task button:hover{
- color: white;
- background-color: darkred;
- transition: 1s;
-transform: scale(1.1);
+
+.task button:hover {
+    color: white;
+    background-color: darkred;
+    transition: 1s;
+    transform: scale(1.1);
 }
-.completed{
+
+.completed {
     text-decoration: line-through;
 }
-h2{
-    color:#fff;
-    mix-blend-mode:hard-light;
+
+h2 {
+    color: #fff;
+    mix-blend-mode: hard-light;
     opacity: 0.7;
     font-family: 'Pacifico', cursive;
     transition: 1s;
-    
+
 }
-h2:hover{
+
+h2:hover {
     cursor: pointer;
     letter-spacing: 15px;
     transition: 1s;
-    color:rebeccapurple;
+    color: rebeccapurple;
     opacity: 10;
 }
-footer{
+
+footer {
     text-align: center;
     opacity: 0.5;
-    mix-blend-mode:difference;
-    color:white;
+    mix-blend-mode: difference;
+    color: white;
     font-size: 14px;
-    
-    
-    
+
 }
 
-footer svg{
+footer svg {
     color: white;
+}
+
+@media only screen and (max-width:400px) {
+    .container {
+        width: 50%;
+        min-width: 350px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        background-color: darkslategray;
+        border-radius: 5px;
+        padding: 30px 0px;
+        border: 2px solid wheat;
+        box-shadow: 7px 4px rgb(150, 61, 61);
+    
+    }
 }
